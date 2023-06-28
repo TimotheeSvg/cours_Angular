@@ -1,0 +1,27 @@
+<div>
+  <app-card [height]="height" [width]="width" [background]="background" [rounded]="rounded">
+    <div class="card" [style.display]="'grid'" [style.grid-template-columns]="'repeat(2, 1fr)'" >
+      <div [style.grid-column]="1" >
+        <ng-content  select="image"></ng-content>
+      </div>
+
+      <div [style.grid-column]="2">
+        <ng-content select="title"></ng-content>
+
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </app-card>
+</div>
+
+<style>
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .full {
+    width: 100%;
+  }
+</style>
+

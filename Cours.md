@@ -162,4 +162,27 @@ resumer:
 </ul>
 
 
+### Pipe
 
+Les pipes nous prmettent de formater du texte de facon simple, ils foncitonnent comme
+des fonctiones en prenant en input la variable passer au template
+
+La synthaxe est l'expression suivi de ` | ` tel que `{{ <expression> | <function> }}`
+
+
+```ts
+export class NomPipe implements PipeTransform {
+    transform(value: string, ...args: unknown[]): unknown {
+        return null
+    }
+}
+```
+
+## onChange
+```ts
+function ngOnChange(changes: SimpleChanges): void {
+    const product = changes['product']
+    
+    
+}
+```
