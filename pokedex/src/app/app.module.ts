@@ -9,6 +9,10 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PokedexComponent } from './pages/pokedex/pokedex.component';
 import { CardHomeComponent } from './components/cards/card-home/card-home.component';
+import { ConnexionComponent } from './pages/connexion/connexion.component';
+import { CardPokemonPokedexComponent } from './components/cards/card-pokemon-pokedex/card-pokemon-pokedex.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { CardHomeComponent } from './components/cards/card-home/card-home.compon
     FooterComponent,
     HomeComponent,
     PokedexComponent,
-    CardHomeComponent
+    CardHomeComponent,
+    ConnexionComponent,
+    CardPokemonPokedexComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

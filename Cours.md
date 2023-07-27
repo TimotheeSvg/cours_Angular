@@ -18,9 +18,9 @@ const unSuperNombre: number = 42;
 
 // création d'un type
 type Pokemon = {
-    name: String,
-    type: String,
-    id: Number
+    name: string,
+    type: string,
+    id: number
 }
 
 // utilisation d'un type générique qui contient des type perso
@@ -176,6 +176,25 @@ export class NomPipe implements PipeTransform {
         return null
     }
 }
+```
+
+## Observable 
+
+Le param de l'observable est ce qui est call quand on se subscribe
+
+La valeur de observer.next est return dans le val du subscribe
+
+je console log la val
+```ts
+let title$ = new Observable(observer=> {
+  console.log('a')
+  observer.next(3)
+});
+
+
+title$.subscribe((val) => {
+  console.log(val)
+})
 ```
 
 ## onChange

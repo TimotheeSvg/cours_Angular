@@ -1,11 +1,11 @@
 <div>
   <app-card [height]="height" [width]="width" [background]="background" [rounded]="rounded">
-    <div class="card" [style.display]="'grid'" [style.grid-template-columns]="'repeat(2, 1fr)'" >
-      <div [style.grid-column]="1" >
-        <ng-content  select="image"></ng-content>
+    <div [style.display]="'flex'" [style.justify-content]="'between'" >
+      <div id="left">
+        <ng-content select="content"></ng-content>
       </div>
 
-      <div [style.grid-column]="2">
+      <div id="right">
         <ng-content select="title"></ng-content>
 
         <ng-content></ng-content>
@@ -14,14 +14,4 @@
   </app-card>
 </div>
 
-<style>
-  .card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .full {
-    width: 100%;
-  }
-</style>
 

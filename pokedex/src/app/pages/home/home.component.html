@@ -1,21 +1,62 @@
-<div class="flex items-center flex-col py-4 px-12 bg-platinium">
+<div class="flex items-center flex-col py-4 px-12 bg-platinium mb-12">
   <div class="w-1/2 mt-12">
       <img [src]="logo" alt="logo"/>
   </div>
 
-  <div class="mt-12">
-    <app-card-home>
-      <div image>
-        <img src="./assets/images/logo.png" alt="img">
+  <div class="mt-24 flex gap-x-48 md:flex-col md:gap-y-24">
+    <app-card [rounded]="10" [width]="35" routerLink="/pokedex"
+              classes="cursor-pointer hover:border-4 hover:border-red-400 hover:shadow-xl"
+    >
+      <div class="flex h-full">
+        <div class="relative pl-4 sm:hidden">
+          <img src="./assets/images/home/sacha.png"
+               alt="sacha du Bourg-Palette"
+               class="h-full w-fit object-contain"
+          >
+        </div>
+
+        <div class="w-full flex flex-col items-center mt-12">
+          <div class="text-3xl font-medium">Le pokedex</div>
+
+          <div class="mt-12 font-light text-2xl">
+            Le meilleur pokedex pokedex online
+          </div>
+        </div>
       </div>
+    </app-card>
 
-      <p title>
-        Je suis le titre
-      </p>
+    <app-card [rounded]="10" [width]="35" routerLink="/connexion"
+              classes="cursor-pointer hover:border-4 hover:border-red-400 hover:shadow-xl"
+    >
+      <div class="flex h-full">
+        <div class="relative pl-4 sm:hidden">
+          <img src="./assets/images/home/dracaufeu.png"
+               alt="dracaufeu du hotclub"
+               class="h-full w-fit object-contain"
+          >
+        </div>
 
-      <p>
-        je suis le content
-      </p>
-    </app-card-home>
+        <div class="w-full flex flex-col items-center mt-12 ">
+          <div class="text-3xl font-medium">Nous rejoindre</div>
+
+          <div class="mt-12 font-light text-2xl">
+            Inscription au pokedex
+          </div>
+        </div>
+      </div>
+        </app-card>
+<!--    <app-card-home>-->
+<!--      <div content>-->
+<!--        <img src="./assets/images/logo.png" alt="img">-->
+<!--      </div>-->
+
+<!--      <p title>-->
+<!--        Je suis le titre-->
+<!--      </p>-->
+
+<!--      <p>-->
+<!--        je suis le content-->
+<!--      </p>-->
+<!--    </app-card-home>-->
   </div>
 </div>

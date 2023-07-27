@@ -7,21 +7,21 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
 
-  imgPokeballOpen:String = './assets/images/navBar/pokeballOpen.png'
-  imgPokeballClose:String = './assets/images/navBar/pokeball.png'
-  imgPokedexLabel:String = './assets/images/navBar/pokedexLabel.png';
-  imgHomeLabel:String = './assets/images/navBar/homeLabel.png';
-  imgPokedex:String = this.imgPokeballClose;
-  imgHome:String = this.imgPokeballClose;
+  imgPokeballOpen:string = './assets/images/navBar/pokeballOpen.png'
+  imgPokeballClose:string = './assets/images/navBar/pokeball.png'
+  imgPokedexLabel:string = './assets/images/navBar/pokedexLabel.png';
+  imgHomeLabel:string = './assets/images/navBar/homeLabel.png';
+  imgPokedex:string = this.imgPokeballClose;
+  imgHome:string = this.imgPokeballClose;
 
-  enterSectionPokeball(enter:Boolean):void {
+  enterSectionPokeball(enter:boolean):void {
     if (enter) {
       this.imgPokedex = this.imgPokeballOpen;
     } else {
       this.imgPokedex = this.imgPokeballClose;
     }
   }
-  enterSectionHome(enter:Boolean):void {
+  enterSectionHome(enter:boolean):void {
     if (enter) {
       this.imgHome = this.imgPokeballOpen;
     } else {

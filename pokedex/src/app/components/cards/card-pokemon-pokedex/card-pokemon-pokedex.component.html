@@ -1,0 +1,49 @@
+<div>
+  <div class="flex w-full bg-repeat px-2 rounded-xl" style="background-image: url('./assets/images/backgroundPokemon.jpg')">
+    <div class="w-full self-center">
+      <img *ngIf="img" [src]="img" alt="pokeimgae" class="w-full bg-white border border-teal-300 rounded-xl ">
+    </div>
+
+    <div class="w-full my-6 mx-4 bg-white border-2 border-double border-teal-300">
+      <div class="text-center font-medium text-2xl">
+        {{pokemon?.name}}
+      </div>
+
+      <div class="flex flex-row justify-evenly pt-2 font-semibold">
+        <div *ngFor="let type of pokemon?.types" class="">
+          {{type}}
+        </div>
+      </div>
+
+      <div class="pt-2">
+        <div class="flex justify-evenly">
+          <div class="font-semibold">
+            health
+          </div>
+
+          <div>
+              {{pokemon?.stats?.health?.base_stat}}
+          </div>
+        </div>
+        <div class="flex justify-evenly">
+          <div class="font-semibold">
+            attack
+          </div>
+
+          <div>
+            {{pokemon?.stats?.attack?.base_stat}}
+          </div>
+        </div>
+        <div class="flex justify-evenly">
+          <div class="font-semibold">
+            defense
+          </div>
+
+          <div>
+            {{pokemon?.stats?.defense?.base_stat}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

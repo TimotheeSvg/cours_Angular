@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-    logo:String = './assets/images/logo.png'
+    logo:string = './assets/images/logo.png'
 }

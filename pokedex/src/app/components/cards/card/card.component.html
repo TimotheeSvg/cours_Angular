@@ -1,3 +1,8 @@
-<div [style]="{width: width+'em', height: height+'em', background: background, borderRadius: rounded + '%'}" >
+<div [style]="{width: width+'em',
+              height: height+'em',
+              background: background,
+              borderRadius: rounded + '%'}"
+    [class]="classes"
+>
   <ng-content></ng-content>
 </div>

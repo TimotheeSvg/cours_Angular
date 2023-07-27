@@ -1,1 +1,21 @@
-<p>pokedex</p>
+<div class="w-full h-full mb-12">
+  <div class="flex items-center w-full justify-center mt-4">
+    <input type="text" [(ngModel)]="searchPokemon" (input)="onSearch()" placeholder="Rechercher un Pokémon" class="py-2 px-4" />
+  </div>
+
+  <div class="grid grid-cols-4 gap-x-6 gap-y-8 mt-12 mx-12">
+    <div *ngFor="let pokemon of pokemonsShow" class="col-span-1 w-full h-full bg-white/50 shadow-sm cursor-pointer">
+      <app-card-pokemon-pokedex [pokemonBase]="pokemon"></app-card-pokemon-pokedex>
+    </div>
+  </div>
+
+  <div class="mt-8 flex gap-x-6 justify-center">
+    <div class="bg-white cursor-pointer p-3" (click)="previousPage()">
+      <-
+    </div>
+
+    <div class="bg-white cursor-pointer p-3" (click)="nextPage()">
+      ->
+    </div>
+  </div>
+</div>
