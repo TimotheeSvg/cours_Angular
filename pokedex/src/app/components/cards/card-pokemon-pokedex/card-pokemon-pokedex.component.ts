@@ -23,7 +23,7 @@ export class CardPokemonPokedexComponent {
 
   img: String = './assets/images/defaultPokemon.jpg';
 
-
+//cycle de vie des composants
   ngOnInit() {
     this.pokemon$ = this.service.getAllInformations(this.pokemonBase.url)
     this.pokemon$.subscribe({

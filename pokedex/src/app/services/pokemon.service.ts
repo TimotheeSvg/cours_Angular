@@ -5,10 +5,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class PokemonService {
-
-  private limit:Number = 0;
-  private offset:Number=0;
-
+  // Service de toute les structure de données
   constructor(private http: HttpClient) {}
 
   getAllPokemon():Observable<PokemonResponse> {

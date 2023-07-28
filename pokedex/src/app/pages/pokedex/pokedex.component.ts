@@ -8,16 +8,19 @@ import {
 } from "../../services/pokemon.service";
 import {Observable} from "rxjs";
 
+
 @Component({
   selector: 'app-pokedex',
   templateUrl: './pokedex.component.html',
-  styleUrls: ['./pokedex.component.css']
+  styleUrls: ['./pokedex.component.css'],
 })
 export class PokedexComponent {
+  //Utilisation d'un observable pour les infos retournées par l'api
   pokemonResponse$: Observable<PokemonResponse>
   pokemonsBase: Array<PokemonBase> = [];
   pokemonsFiltered: Array<PokemonBase> = [];
 
+  // Ceci est une variable de template car son contenu sera afficher
   pokemonsShow: Array<PokemonBase> = [];
   currentPage: number = 1;
   itemsPerPage: number = 20;

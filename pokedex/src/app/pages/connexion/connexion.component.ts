@@ -7,7 +7,4 @@ import { Component } from '@angular/core';
 })
 export class ConnexionComponent {
 
-  ngOnInit() {
-    console.log('la')
-  }
 }
